@@ -1,21 +1,29 @@
 {
   "name": "project_2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Mindfully app",
   "main": "server.js",
   "directories": {
-    "test": "tests"
+    "test": "mocha"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
     "express": "^4.16.3",
+
     "mysql2": "^1.5.3",
     "path": "^0.12.7",
     "sequelize": "^4.37.6"
+
+    "mocha": "^5.1.1",
+    "nightmare": "^3.0.1",
+    "path": "^0.12.7",
+    "semantic-ui": "^2.3.1"
+
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node server.js"
   },
   "repository": {
