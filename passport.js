@@ -1,8 +1,12 @@
-module.exports = function() {
+var expressSession = require("express-session");
+var passport = require("passport");
+var LocalStrategy = require("passport-local").Strategy;
+var db = require("./models");
+module.exports = function(app) {
   console.log("INSIDE PASSPORT JS");
   passport.use(
     new LocalStrategy(function(username, password, done) {
-      db.find(username, function(err, result) {
+      db.Author.find({ name: username }, function(err, user) {
         if (err) {
           return done(err);
         }
@@ -16,11 +20,11 @@ module.exports = function() {
     })
   );
   passport.serializeUser(function(user, done) {
-    done(null, author.id);
+    done(null, user.id);
   });
 
   passport.deserializeUser(function(userId, done) {
-    db.findById(userId, function(err, user) {
+    db.Author.findById(userId, function(err, user) {
       if (err || !user) {
         return done(err);
       }
@@ -32,9 +36,17 @@ module.exports = function() {
   app.use(passport.initialize());
   app.use(passport.session());
 
-  app.post("/login", passport.authenticate("local"), (req, res) => {
-    res.send({ message: "Welcome!" });
-  });
+  app.post(
+    "/login",
+    passport.authenticate("local", {
+      successRedirect: "/",
+      failureRedirect: "/",
+      failureFlash: true
+    }),
+    function(req, res) {
+      res.redirect("/amiloggedin");
+    }
+  );
 
   app.get("/logout", (req, res) => {
     req.logout();
