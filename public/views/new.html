@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -35,69 +36,67 @@
 
 <body>
 
-    <div class="ui middle aligned center aligned grid">
-        <div class="column">
-            <h2 class="ui image header" id="loginHeader">
-                <div class="content">
-                    Compose your message
-                </div>
-            </h2>
-            <form class="ui large form">
-                <div class="ui stacked segment">
-                    <div class="ui fluid large labeled input" id="newField">
-                        <div class="ui label">
-                            Title:
-                        </div>
-                        <input type="text" placeholder="Title...">
+        <div class="ui middle aligned center aligned grid">
+            <div class="column">
+                <h2 class="ui image header" id="loginHeader">
+                    <div class="content">
+                        Compose your message
                     </div>
-
-                    <div class="ui fluid large labeled input" id="newField">
-                        <div class="ui label">
-                            Message:
-                        </div>
-                        <input type="text" placeholder="Message...">
+                </h2>
+                <form class="ui large form">
+                    <div class="ui stacked segment">
+                
+                        <div class="field fluid large input" id="newField">
+                                <label>Title</label>
+                                <input type="text" placeholder="Title">
+                              </div>
+    
+                        <div class="field fluid large input" id="newField">
+                                <label>Message</label>
+                                <textarea type="text" placeholder="Message"></textarea>
+                              </div>
+    
+                        <div class="ui form fluid large" id="newSelection">
+                                <div class="field">
+                                  <label>Category</label>
+                                  <div class="ui search dropdown selection"><select>
+                                    <option value="">Select Country</option>
+                                    <option value="anniversary">Anniversary</option>
+                                    <option value="birthday">Birthday</option>
+                                    <option value="congrats">Congratulations</option>
+                                    <option value="get">Get Well</option>
+                                    <option value="grad">Graduation</option>
+                                    <option value="baby">New Baby</option>
+                                    <option value="retire">Retirement</option>
+                                    <option value="thanks">Thank You</option>
+                                    <option value="wedding">Wedding</option>
+                                  </select><i class="dropdown icon"></i><input class="search" autocomplete="off" tabindex="0"><div class="default text">Select Country</div><div class="menu" tabindex="-1"><div class="item" data-value="anniversary">Anniversary</div><div class="item" data-value="birthday">Birthday</div><div class="item" data-value="congrats">Congratulations</div><div class="item" data-value="get">Get Well</div><div class="item" data-value="grad">Graduation</div><div class="item" data-value="baby">New Baby</div><div class="item" data-value="retire">Retirement</div><div class="item" data-value="thanks">Thank You</div><div class="item" data-value="wedding">Wedding</div></div></div>
+                                </div>
+                              </div>
+    
+                        <button class="ui primary button" id="newSubmit">
+                            Submit
+                        </button>
+    
+                        <button class="ui button">
+                            Back to Dashboard
+                        </button>
+    
                     </div>
-
-                    <div class="ui fluid large selection dropdown" id="newSelection">
-                        <input type="hidden" name="gender">
-                        <i class="dropdown icon"></i>
-                        <div class="default text">Category</div>
-                        <div class="menu">
-                            <div class="item">Anniversary</div>
-                            <div class="item">Birthday</div>
-                            <div class="item">Congratulations</div>
-                            <div class="item">Get Well</div>
-                            <div class="item">Graduation</div>
-                            <div class="item">New Baby</div>
-                            <div class="item">Retirement</div>
-                            <div class="item">Thank You</div>
-                            <div class="item">Wedding</div>
-
-
-                        </div>
-                    </div>
-
-                    <button class="ui primary button" id="newSubmit">
-                        Submit
-                    </button>
-
-                    <button class="ui button">
-                        Back to Dashboard
-                    </button>
-
-                </div>
-
-                <div class="ui error message"></div>
-
-            </form>
-
-            <!--  <div class="ui message">
-                New to us?
-                <a href="#">Sign Up</a>
-            </div> -->
+    
+                    <div class="ui error message"></div>
+    
+                </form>
+    
+                <!--  <div class="ui message">
+                    New to us?
+                    <a href="#">Sign Up</a>
+                </div> -->
+            </div>
         </div>
-    </div>
-
-</body>
+    
+    
+    
+    </body>
 
 </html>
