@@ -2,7 +2,7 @@
   display: none;
 }
 
-.ui.primary.inverted.segment {
+#masthead {
   background: #5bc0eb;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -73,6 +73,41 @@
 .secondary.pointing.menu .toc.item {
   display: none;
 }
+#mainMenu {
+  border-color:#5bc0eb;
+}
+
+#dashboardTop {
+  border-color:#5bc0eb;
+  background-color:#5bc0eb;
+
+}
+
+#dashboardMenu {
+  color: rgba(255, 255, 255, 0.9);
+
+}
+
+#dashboardPost {
+  color: rgba(255, 255, 255, 0.9);
+  background-color:#fa7921;
+}
+
+#dashboardPost:hover {
+  background-color:#d8681d;
+}
+
+#getStartedBtn {
+  background-color: #fa7921;
+  margin-top: 20px;
+}
+
+#getStartedBtn:hover {
+  background-color: #a55d2e;
+}
+
+
+
 
 @media only screen and (max-width: 700px) {
   .ui.fixed.menu {
