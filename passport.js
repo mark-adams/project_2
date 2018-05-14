@@ -6,11 +6,7 @@ module.exports = function(app) {
   console.log("INSIDE PASSPORT JS");
   passport.use(
     new LocalStrategy(function(username, password, done) {
-      db.Author.find({ name: username }, function(err, user) {
-        if (err) {
-          return done(err);
-        }
-
+      db.Author.findOne({ where: { name: username } }).then(function(user) {
         if (!user || user.password !== password) {
           return done(null, false);
         }
@@ -24,7 +20,7 @@ module.exports = function(app) {
   });
 
   passport.deserializeUser(function(userId, done) {
-    db.Author.findById(userId, function(err, user) {
+    db.Author.findById(userId).then(function(err, user) {
       if (err || !user) {
         return done(err);
       }
