@@ -31,8 +31,10 @@
 
             <div class="ui container">
                 <div class="ui large secondary inverted pointing menu" id="mainMenu">
+
 <!--                     <img class="logo" src="../img/mindfully_logo.png">
  -->
+
                     <a class="active item">Home</a>
                     <a class="item" href="#featured">Accolades</a>
                     <a class="item" href="#weHelp">Benefits</a>
@@ -132,10 +134,18 @@
             </div>
         </div>
     </div>
-    <form action="/login" method="post">
+    <form action="/signup" method="post">
         <div>
-            <label>Username:</label>
-            <input type="text" name="username" />
+            <label>FirstName:</label>
+            <input type="text" name="firstName" />
+        </div>
+        <div>
+            <label>LastName:</label>
+            <input type="text" name="lastName" />
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="text" name="email" />
         </div>
         <div>
             <label>Password:</label>
