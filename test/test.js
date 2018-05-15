@@ -10,7 +10,7 @@ describe("Mindfully", function () {
   it("should take user to accolades 'anchor' with text 'Easy to Use!'", function (done) {
     //steps to test for existing user
     Nightmare({ show: true })
-      .goto(" http://192.168.1.9:8081/views/home.html")
+      .goto("https://secret-brook-82924.herokuapp.com/")
       //click login
       .click('#accolades')
       //evaluate whether correct page is displayed

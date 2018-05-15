@@ -14,5 +14,9 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/views/dashboard.html"));
   });
 
+  //new.html route
+  app.get("/dashboard", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/views/new.html"));
+  });
 };
 

@@ -5,7 +5,7 @@ var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
 
 var app = express();
-var PORT = process.env.PORT || 8081;
+var PORT = process.env.PORT || 8080;
 
 var db = require("./models");
 

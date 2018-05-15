@@ -6,6 +6,9 @@
   "directories": {
     "test": "mocha"
   },
+  "engines": {
+    "node": "^8.10.0"
+  },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
