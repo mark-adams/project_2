@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -8,11 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
+    <link rel="icon" type="image/ico" href="../img/favicon.ico">
+
     <!-- Site Properties -->
-    <title>Mindfully | Home</title>
-
-    <!-- <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css"> -->
-
+    <title>Mindfully | New Message</title>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
@@ -26,41 +24,32 @@
 
 
 </head>
-<!-- 
-
- 
-    <div>
-        <input type="submit" value="Log In"/>
-    </div>
-</form> -->
 
 <body>
 
-        <div class="ui middle aligned center aligned grid">
-            <div class="column">
-                <h2 class="ui image header" id="loginHeader">
-                    <div class="content">
-                        Compose your message
+    <div class="ui middle aligned center aligned grid">
+        <div class="column">
+            <h2 class="ui image header" id="loginHeader">
+                <div class="content">
+                    Compose your message
+                </div>
+            </h2>
+            <form class="ui large form">
+                <div class="ui stacked segment">
+
+                    <div class="field fluid large input" id="newField">
+                        <input type="text" placeholder="Title">
                     </div>
-                </h2>
-                <form class="ui large form">
-                    <div class="ui stacked segment">
-                
-                        <div class="field fluid large input" id="newField">
-                                <label>Title</label>
-                                <input type="text" placeholder="Title">
-                              </div>
-    
-                        <div class="field fluid large input" id="newField">
-                                <label>Message</label>
-                                <textarea type="text" placeholder="Message"></textarea>
-                              </div>
-    
-                        <div class="ui form fluid large" id="newSelection">
-                                <div class="field">
-                                  <label>Category</label>
-                                  <div class="ui search dropdown selection"><select>
-                                    <option value="">Select Country</option>
+
+                    <div class="field fluid large input" id="newField">
+                        <textarea type="text" placeholder="Message"></textarea>
+                    </div>
+
+                    <div class="ui form fluid large" id="newSelection">
+                        <div class="field">
+                            <div class="ui search dropdown selection">
+                                <select>
+                                    <option value="">Select Category</option>
                                     <option value="anniversary">Anniversary</option>
                                     <option value="birthday">Birthday</option>
                                     <option value="congrats">Congratulations</option>
@@ -70,33 +59,49 @@
                                     <option value="retire">Retirement</option>
                                     <option value="thanks">Thank You</option>
                                     <option value="wedding">Wedding</option>
-                                  </select><i class="dropdown icon"></i><input class="search" autocomplete="off" tabindex="0"><div class="default text">Select Country</div><div class="menu" tabindex="-1"><div class="item" data-value="anniversary">Anniversary</div><div class="item" data-value="birthday">Birthday</div><div class="item" data-value="congrats">Congratulations</div><div class="item" data-value="get">Get Well</div><div class="item" data-value="grad">Graduation</div><div class="item" data-value="baby">New Baby</div><div class="item" data-value="retire">Retirement</div><div class="item" data-value="thanks">Thank You</div><div class="item" data-value="wedding">Wedding</div></div></div>
+                                </select>
+                                <i class="dropdown icon"></i>
+                                
+                                <input class="search" autocomplete="off" tabindex="0">
+                                <div class="default text">Select Category</div>
+                                <div class="menu" tabindex="-1">
+                                    <div class="item" data-value="anniversary">Anniversary</div>
+                                    <div class="item" data-value="birthday">Birthday</div>
+                                    <div class="item" data-value="congrats">Congratulations</div>
+                                    <div class="item" data-value="get">Get Well</div>
+                                    <div class="item" data-value="grad">Graduation</div>
+                                    <div class="item" data-value="baby">New Baby</div>
+                                    <div class="item" data-value="retire">Retirement</div>
+                                    <div class="item" data-value="thanks">Thank You</div>
+                                    <div class="item" data-value="wedding">Wedding</div>
                                 </div>
-                              </div>
-    
-                        <button class="ui primary button" id="newSubmit">
-                            Submit
-                        </button>
-    
-                        <button class="ui button">
-                            Back to Dashboard
-                        </button>
-    
+                            </div>
+                        </div>
                     </div>
-    
-                    <div class="ui error message"></div>
-    
-                </form>
-    
-                <!--  <div class="ui message">
+
+                    <button class="ui primary button" id="newSubmit">
+                        Submit
+                    </button>
+
+                    <button class="ui button">
+                        Back to Dashboard
+                    </button>
+
+                </div>
+
+                <div class="ui error message"></div>
+
+            </form>
+
+            <!--  <div class="ui message">
                     New to us?
                     <a href="#">Sign Up</a>
                 </div> -->
-            </div>
         </div>
-    
-    
-    
-    </body>
+    </div>
+
+
+
+</body>
 
 </html>
