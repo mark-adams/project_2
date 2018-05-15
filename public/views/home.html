@@ -6,12 +6,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" type="image/ico" href="../img/favicon.ico">
 
     <!-- Site Properties -->
     <title>Mindfully | Home</title>
-
-    <!-- <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css"> -->
-
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
@@ -23,12 +21,9 @@
     <link rel="stylesheet" href="../views/semantic/dist/semantic.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
-
 </head>
 
 <body>
-
-
 
     <!-- Page Contents -->
     <div class="pusher">
@@ -36,14 +31,16 @@
 
             <div class="ui container">
                 <div class="ui large secondary inverted pointing menu" id="mainMenu">
-             
+<!--                     <img class="logo" src="../img/mindfully_logo.png">
+ -->
                     <a class="active item">Home</a>
-                    <a class="item">Benefits</a>
-                    <a class="item">Examples</a>
-                    <a class="item">Contact</a>
+                    <a class="item" href="#featured">Accolades</a>
+                    <a class="item" href="#weHelp">Benefits</a>
+                    <a class="item" href="#examples">Examples</a>
+                    <a class="item" href="#contact">Contact</a>
                     <div class="right item">
                         <a class="ui inverted button">Log in</a>
-               </div>
+                    </div>
                 </div>
             </div>
 
@@ -51,7 +48,7 @@
                 <h1 class="ui inverted header">
                     Mindfully
                 </h1>
-                <h2>A simple-yet-timelss concept.</h2>
+                <h2>A free, private, and personalized time capsule for ideas, letters, and other written memories.</h2>
                 <div class="ui huge primary button" id="getStartedBtn">Get Started
                     <i class="right arrow icon"></i>
                 </div>
@@ -63,11 +60,10 @@
             <div class="ui middle aligned stackable grid container">
                 <div class="row">
                     <div class="eight wide column">
-                        <h3 class="ui header">We Help Companies and Companions</h3>
-                        <p>We can give your company superpowers to do things that they never thought possible. Let us delight
-                            your customers and empower your needs...through pure data analytics.</p>
-                        <h3 class="ui header">We Make Bananas That Can Dance</h3>
-                        <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.</p>
+                        <h3 class="ui header" id="weHelp">We Help Create Memories</h3>
+                        <p>Through our online dashboard, community members can easily and securely create, edit, and save messages of all lengths.</p>
+                        <h3 class="ui header">A Secure, Private Community</h3>
+                        <p>Our online portal is backed by state-of-the-art cybersecurity protocols.</p>
                     </div>
                     <div class="six wide right floated column">
                         <img src="../img/typing.jpg" class="ui large bordered rounded image">
@@ -75,7 +71,7 @@
                 </div>
                 <div class="row">
                     <div class="center aligned column">
-                        <a class="ui huge button">Check Them Out</a>
+                        <a class="ui huge button">Sign Up</a>
                     </div>
                 </div>
             </div>
@@ -83,17 +79,17 @@
 
 
         <div class="ui vertical stripe quote segment">
-            <div class="ui equal width stackable internally celled grid">
+            <div class="ui equal width stackable internally celled grid" id="featured">
                 <div class="center aligned row">
                     <div class="column">
-                        <h3>"What a Company"</h3>
-                        <p>That is what they all say about us</p>
+                        <h3>"Easy to Use!"</h3>
+                        <p>We've been featured in over 50 news outlets.</p>
                     </div>
                     <div class="column">
-                        <h3>"I shouldn't have gone with their competitor."</h3>
+                        <h3>"I love Mindfully! It's cheaper than a card."</h3>
                         <p>
                             <img src="../img/nan.jpg" class="ui avatar image">
-                            <b>Nan</b> Chief Fun Officer Acme Toys
+                            <b>Nan</b> Member Since 2015
                         </p>
                     </div>
                 </div>
@@ -102,46 +98,35 @@
 
         <div class="ui vertical stripe segment">
             <div class="ui text container">
-                <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-                <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing
-                    by providing massive amounts of whitespace and generic content that can seem massive, monolithic and
-                    worth your attention.</p>
-                <a class="ui large button">Read More</a>
+                
+                <h3 class="ui header">Save a Trip to Paper Source, Use Mindfully.</h3>
+                <p>Instead of driving to a brick-and-mortar store to spend more money than you want, we are free 
+                    and will always be. Plus, there's no limit to the amount of text in your messages so type your heart out.
+                   </p>
+                <a class="ui large button">Sign Up</a>
                 <h4 class="ui horizontal header divider">
-                    <a href="#">Case Studies</a>
+                    <a id="examples">Examples</a>
                 </h4>
-                <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
+                <h3 class="ui header">When a Son Forgot Mother's Day, He Turned to Mindfully.</h3>
                 <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true.
                     It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
-                <a class="ui large button">I'm Still Quite Interested</a>
+                <a class="ui large button">Sign Up</a>
             </div>
         </div>
 
 
-        <div class="ui inverted vertical footer segment">
+        <div class="ui inverted vertical footer segment" id="contact">
             <div class="ui container">
                 <div class="ui stackable inverted divided equal height stackable grid">
-                    <div class="three wide column">
+                    <div class="six wide column">
                         <h4 class="ui inverted header">About</h4>
-                        <div class="ui inverted link list">
-                            <a href="#" class="item">Sitemap</a>
-                            <a href="#" class="item">Contact Us</a>
-                            <a href="#" class="item">Religious Ceremonies</a>
-                            <a href="#" class="item">Gazebo Plans</a>
-                        </div>
+                        <p>Mindfully was created in 2018 by Kiley, Sam, and Ted.</p>
+
                     </div>
-                    <div class="three wide column">
-                        <h4 class="ui inverted header">Services</h4>
-                        <div class="ui inverted link list">
-                            <a href="#" class="item">Banana Pre-Order</a>
-                            <a href="#" class="item">DNA FAQ</a>
-                            <a href="#" class="item">How To Access</a>
-                            <a href="#" class="item">Favorite X-Men</a>
-                        </div>
-                    </div>
+           
                     <div class="seven wide column">
-                        <h4 class="ui inverted header">Footer Header</h4>
-                        <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+                        <h4 class="ui inverted header">Contact</h4>
+                        <p>For business inquiries, call 555-555-5555.</p>
                     </div>
                 </div>
             </div>
