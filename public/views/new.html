@@ -34,15 +34,15 @@
                     Compose your message
                 </div>
             </h2>
-            <form class="ui large form">
+            <form class="ui large form" action="/api/letters" method="POST">
                 <div class="ui stacked segment">
 
                     <div class="field fluid large input" id="newField">
-                        <input type="text" placeholder="Title">
+                        <input type="text" placeholder="Title" name="title">
                     </div>
 
                     <div class="field fluid large input" id="newField">
-                        <textarea type="text" placeholder="Message"></textarea>
+                        <textarea type="text" placeholder="Message" name="letter"></textarea>
                     </div>
 
                     <div class="ui form fluid large" id="newSelection">
@@ -61,7 +61,7 @@
                                     <option value="wedding">Wedding</option>
                                 </select>
                                 <i class="dropdown icon"></i>
-                                
+
                                 <input class="search" autocomplete="off" tabindex="0">
                                 <div class="default text">Select Category</div>
                                 <div class="menu" tabindex="-1">
