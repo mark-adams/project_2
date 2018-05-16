@@ -1,24 +1,22 @@
 {
   "development": {
     "username": "root",
-
-    "password": "ComputerNerd1",
-
+    "password": "Newjob18",
     "database": "app_entries",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "database_test",
+    "password": "Newjob18",
+    "database": "app_entries",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": null,
-    "database": "database_production",
+    "password": "Newjob18",
+    "database": "app_entries",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
