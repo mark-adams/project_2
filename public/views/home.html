@@ -32,7 +32,7 @@
             <div class="ui container">
                 <div class="ui large secondary inverted pointing menu" id="mainMenu">
 
-<!--                     <img class="logo" src="../img/mindfully_logo.png">
+                    <!--                     <img class="logo" src="../img/mindfully_logo.png">
  -->
 
                     <a class="active item">Home</a>
@@ -41,7 +41,8 @@
                     <a class="item" href="#examples">Examples</a>
                     <a class="item" href="#contact">Contact</a>
                     <div class="right item">
-                        <a class="ui inverted button" href="/loginSignUp">Log in</a>
+                        <a class="ui inverted button" href="/login">Sign up</a>
+                        <a class="ui inverted button" href="/login">Log in</a>
                     </div>
                 </div>
             </div>
@@ -51,8 +52,8 @@
                     Mindfully
                 </h1>
                 <h2>A free, private, and personalized time capsule for ideas, letters, and other written memories.</h2>
-                <div class="ui huge primary button" id="getStartedBtn">Get Started
-                    <i class="right arrow icon"></i>
+                <a class="ui huge primary button" id="getStartedBtn" href="/login">Get Started
+                    <i class="right arrow icon"></i></a>
                 </div>
             </div>
 
@@ -63,7 +64,8 @@
                 <div class="row">
                     <div class="eight wide column">
                         <h3 class="ui header" id="weHelp">We Help Create Memories</h3>
-                        <p>Through our online dashboard, community members can easily and securely create, edit, and save messages of all lengths.</p>
+                        <p>Through our online dashboard, community members can easily and securely create, edit, and save messages
+                            of all lengths.</p>
                         <h3 class="ui header">A Secure, Private Community</h3>
                         <p>Our online portal is backed by state-of-the-art cybersecurity protocols.</p>
                     </div>
@@ -73,7 +75,7 @@
                 </div>
                 <div class="row">
                     <div class="center aligned column">
-                        <a class="ui huge button">Sign Up</a>
+                        <a class="ui huge button" href="/login" id="secondBtn">Sign Up</a>
                     </div>
                 </div>
             </div>
@@ -100,19 +102,19 @@
 
         <div class="ui vertical stripe segment">
             <div class="ui text container">
-                
+
                 <h3 class="ui header">Save a Trip to Paper Source, Use Mindfully.</h3>
-                <p>Instead of driving to a brick-and-mortar store to spend more money than you want, we are free 
-                    and will always be. Plus, there's no limit to the amount of text in your messages so type your heart out.
-                   </p>
-                <a class="ui large button">Sign Up</a>
+                <p>Instead of driving to a brick-and-mortar store to spend more money than you want, we are free and will always
+                    be. Plus, there's no limit to the amount of text in your messages so type your heart out.
+                </p>
+                <a class="ui large button" id="fourthBtn" href="/login">Sign Up</a>
                 <h4 class="ui horizontal header divider">
                     <a id="examples">Examples</a>
                 </h4>
                 <h3 class="ui header">When a Son Forgot Mother's Day, He Turned to Mindfully.</h3>
                 <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true.
                     It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
-                <a class="ui large button">Sign Up</a>
+                <a class="ui large button" href="/login" id="thirdBtn">Sign Up</a>
             </div>
         </div>
 
@@ -125,7 +127,7 @@
                         <p>Mindfully was created in 2018 by Kiley, Sam, and Ted.</p>
 
                     </div>
-           
+
                     <div class="seven wide column">
                         <h4 class="ui inverted header">Contact</h4>
                         <p>For business inquiries, call 555-555-5555.</p>
@@ -134,7 +136,7 @@
             </div>
         </div>
     </div>
-    <form action="/signup" method="post">
+    <!-- <form action="/signup" method="post">
         <div>
             <label>FirstName:</label>
             <input type="text" name="firstName" />
@@ -155,7 +157,7 @@
             <input type="submit" value="Log In" />
         </div>
     </form>
-
+ -->
 </body>
 
 </html>
