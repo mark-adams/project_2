@@ -1,16 +1,18 @@
 //requiring packages
-var Nightmare = require('nightmare');
-var expect = require('chai').expect;
 
-//name the app we're testing
-describe("Mindfully", function () {
+const Nightmare = require('nightmare')
+const chai = require('chai')
+const expect = chai.expect
 
-  //first story to test
-  this.timeout(30000);
-  it("should take user to accolades 'anchor' with text 'Easy to Use!'", function (done) {
-    //steps to test for existing user
-    Nightmare({ show: true })
-      .goto("https://secret-brook-82924.herokuapp.com/")
+const url = 'http://localhost:8080';
+
+describe('First Test Group', () => {
+  it('Test', function(done) {
+    this.timeout('10s')
+
+    const nightmare = Nightmare({show: true})
+    nightmare
+      .goto(`${url}/`)
       //click login
       .click('#accolades')
       //evaluate whether correct page is displayed
@@ -18,13 +20,33 @@ describe("Mindfully", function () {
         return document.querySelector(selector).innerText;
       })
       //asset expected
-      .then(text => {
+      .then(function(text) {
         "Easy to Use!"
-      });
-      done();
-  });
+        done();
+      })
+  })
 });
+// })
+// var Nightmare = require('nightmare');
+// var expect = require('chai').expect;
 
+//   //first story to test
+//     Nightmare({ show: true })
+//       .goto("/")
+//       //click login
+//       .click('#accolades')
+//       //evaluate whether correct page is displayed
+//       .evaluate(selector => {
+//         return document.querySelector(selector).innerText;
+//       })
+//       //asset expected
+//       .then(text => {
+//         "Easy to Use!"
+//       })
+//       .catch(err => {
+//         console.err(err);
+//       });
+      
 // describe("Mindfully", function () {
 
 //   //first story to test
