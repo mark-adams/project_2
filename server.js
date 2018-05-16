@@ -1,32 +1,45 @@
 var express = require("express");
-var bodyParser = require("body-parser");
-var expressSession = require("express-session");
-var passport = require("passport");
-var LocalStrategy = require("passport-local").Strategy;
-
 var app = express();
-var PORT = process.env.PORT || 8080;
-
-var db = require("./models");
+var passport = require("passport");
+var expressSession = require("express-session");
+var bodyParser = require("body-parser");
+var env = require("dotenv").load();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
-app.use(express.static("public"));
-
 app.use(
   expressSession({
     secret: "keyboard cat",
-    resave: false,
-    saveUninitialized: false
+    resave: true,
+    saveUninitialized: true
   })
 );
 
-require("./passport.js")(app);
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+
+var PORT = process.env.PORT || 8080;
+
+var db = require("./models");
+
+app.use(express.static("public"));
+var models = require("./models");
+require("./config/passport/passport.js")(passport, models.Author);
 
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
+
+//Sync Database
+models.sequelize
+  .sync()
+  .then(function() {
+    console.log("Nice! Database looks fine");
+  })
+  .catch(function(err) {
+    console.log(err, "Something went wrong with the Database Update!");
+  });
 
 db.sequelize
   .query("SET FOREIGN_KEY_CHECKS = 0")
