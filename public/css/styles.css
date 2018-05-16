@@ -100,10 +100,43 @@
 #getStartedBtn {
   background-color: #fa7921;
   margin-top: 20px;
+  color: rgba(255, 255, 255, 0.9);
+
+}
+
+#getStartedBtn:a {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 #getStartedBtn:hover {
   background-color: #a55d2e;
+}
+
+#secondBtn {
+  background-color: #9bc53d;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#secondBtn:hover {
+  background-color: #5c7526;
+}
+
+#thirdBtn {
+  background-color: #fde74c;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#thirdBtn:hover {
+  background-color: #cfbf40;
+}
+
+#fourthBtn{
+  background-color: #e55934;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#fourthBtn:hover {
+  background-color: #c04e2f;
 }
 
 /* #topDashboard{
