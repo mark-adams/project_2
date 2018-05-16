@@ -19,8 +19,14 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/views/new.html"));
   });
   
+  //loginSignUp.html route
   app.get("/login", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/views/loginSignUp.html"));
+  });
+
+  //new.html route
+  app.get("/new", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/views/new.html"));
   });
 
   app.get("/signup", authController.signup);
