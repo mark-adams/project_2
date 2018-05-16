@@ -3,27 +3,25 @@ var Nightmare = require('nightmare');
 var expect = require('chai').expect;
 
 //name the app we're testing
-describe("Trello", function () {
+describe("Mindfully", function () {
 
   //first story to test
   this.timeout(30000);
-  it("should take user to login page", function (done) {
+  it("should take user to accolades 'anchor' with text 'Easy to Use!'", function (done) {
     //steps to test for existing user
     Nightmare({ show: true })
-      .goto("https://trello.com/logged-out")
+      .goto("https://secret-brook-82924.herokuapp.com/")
       //click login
-      .click('.global-header-section-button')
+      .click('#accolades')
       //evaluate whether correct page is displayed
-      .evaluate(function () {
-        return document.querySelector("title").text;
+      .evaluate(selector => {
+        return document.querySelector(selector).innerText;
       })
       //asset expected
-      .then(function (title) {
-        expect(title).to.equal("Logged out of Trello");
-        console.log(title)
-
-        done();
-      })
+      .then(text => {
+        "Easy to Use!"
+      });
+      done();
   });
 });
 
@@ -68,7 +66,4 @@ describe("Trello", function () {
 //     });
 // });
 //story if error is thrown
-it("should throw an error for fun", function () {
-  throw new Error("Throw an error instead of writing a new letter.");
-});
-
+// 

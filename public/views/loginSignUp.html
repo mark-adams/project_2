@@ -9,9 +9,7 @@
 
     <!-- Site Properties -->
     <title>Mindfully | Login</title>
-    <link rel="icon" 
-    type="image/ico" 
-    href="../img/favicon.ico">
+    <link rel="icon" type="image/ico" href="../img/favicon.ico">
 
     <!-- <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css"> -->
 
@@ -40,12 +38,14 @@
 
     <div class="ui middle aligned center aligned grid">
         <div class="column">
+
             <h2 class="ui image header" id="loginHeader">
                 <div class="content">
                     Log into your account
                 </div>
             </h2>
-            <form action="/login" method="post" class="ui large form" id="sign in" name="signin">
+
+            <form action="/login" method="post" class="ui large form" id="signIn" name="signin">
                 <div class="ui stacked segment">
                     <div class="field">
                         <div class="ui left icon input">
@@ -63,6 +63,26 @@
                 </div>
 
                 <div class="ui error message"></div>
+
+            </form>
+
+            <h2 class="ui image header" id="loginHeader">
+                <div class="content">
+                    Sign up </div>
+            </h2>
+
+            <form action="/signup" method="post" class="ui large form" id="signup" name="signup">
+                <div class="ui stacked segment">
+                    <label for="email">Email Address</label>
+                    <input class="text" name="email" type="email" />
+                    <label for="firstname">Firstname</label>
+                    <input name="firstname" type="text" />
+                    <label for="lastname">Lastname</label>
+                    <input name="lastname" type="text" />
+                    <label for="password">Password</label>
+                    <input name="password" type="password" />
+                    <input class="ui fluid large submit button" type="submit" value="Sign Up" id="loginInput"/>
+                </div>
 
             </form>
 
