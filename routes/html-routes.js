@@ -1,6 +1,6 @@
 //dependencies
 var path = require("path");
-var authController = require("../controllers/authcontroller.js");
+var passport = require("passport");
 
 //routes
 module.exports = function(app) {
@@ -14,16 +14,30 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/views/dashboard.html"));
   });
 
-  //loginSignUp.html route
-  app.get("/login", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/views/loginSignUp.html"));
-  });
 
   //new.html route
   app.get("/new", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/views/new.html"));
   });
 
-  app.get("/signup", authController.signup);
-  app.get("/signin", authController.signin);
+  //loginSignUp.html route
+  app.get("/login", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/views/loginSignUp.html"));
+  });
+
+  app.post(
+    "/login",
+    passport.authenticate("local-signin", {
+      successRedirect: "/dashboard",
+      failureRedirect: "/login"
+    })
+  );
+
+  app.post(
+    "/signup",
+    passport.authenticate("local-signup", {
+      successRedirect: "/dashboard",
+      failureRedirect: "/login"
+    })
+  );
 };

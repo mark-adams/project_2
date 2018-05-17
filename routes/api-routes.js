@@ -1,5 +1,4 @@
 var db = require("../models");
-var passport = require("passport");
 
 module.exports = function(app) {
   //GET route for getting ALL of the letters (need to figure out how we are going to make this user specific)
@@ -63,13 +62,4 @@ module.exports = function(app) {
       res.json(result);
     });
   });
-
-  app.post(
-    "/signup",
-    passport.authenticate("local-signup", {
-      successRedirect: "/dashboard",
-
-      failureRedirect: "/"
-    })
-  );
 };
